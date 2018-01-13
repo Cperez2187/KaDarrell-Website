@@ -458,31 +458,26 @@ table {
 	background-color: #FBFBFB;
 }
 .hero h1 {
-	font-size: 85px;
-	/* letter-spacing: -8px; */
 	margin: 0;
-	/* font-weight: 600; */
-	line-height: 95px;
-	/* text-transform: uppercase; */
+	/* line-height: 95px; */
 }
 .hero h1 span {
 	color:#a1a9b0;
 	/* display:inline-block; */
 }
 .hero h3 {
-	font-size: 20px;
+	font-size: 1.56vw;
 	margin:0;
 	padding:0;
 	opacity:0.5;
 	color: #E04343;
-	letter-spacing: 18px;
-	line-height: 50px;
+	letter-spacing: 1.4vw;
+	line-height: 12vh;
 	text-transform: uppercase;
 }
 .hero p {
 	letter-spacing:1px;
-	color:#fff;
-	font-size: 15px;
+	font-size: 14px;
 }
 /* Boucing Arrow Animation */
 @keyframes arrowbounce {
@@ -1101,6 +1096,11 @@ ul.slides li {
 	animation-delay:1s;
 	-webkit-animation-delay:1s;
 }
+
+.delay-1-5s {
+  animation-delay:1.5s;
+  -webkit-animation-delay:1.5s;
+}
 .wp3 {
 	background:url('../img/iphone-bg.png') no-repeat center center;
 	background-position:200px 10px;
@@ -1115,9 +1115,17 @@ ul.slides li {
 
 	.hero h1 {
 		font-size: 100px;
-		line-height: 80px;
-		margin-top: 65px;
-}
+    line-height: 4vh;
+    margin-bottom: 3%;
+  }
+
+  .hero h3 {
+    line-height: 3vh;
+  }
+
+  #title-name {
+    margin-top: 22%;
+  }
 }
 /* 480px (WVGA - Low End Windows Phone) */
 @media screen and (max-width:480px) {
@@ -1190,14 +1198,17 @@ ul.slides li {
     text-align: center;
 	}
 
-	.hero h3 {
-	    letter-spacing: 10px;
-	}
-
-
 	.hero {
 	    padding-bottom: 0;
-	}
+  }
+  
+  .hero h1 {
+    margin-bottom: 1%;
+  }
+
+  .hero h3 {
+    line-height: 10vh;
+  }
 
 	.subscribe input[type=text] {
 	    width: 50%;
@@ -1244,16 +1255,18 @@ ul.slides li {
 #title-name {
   position: absolute;
   z-index: 998;
-  margin-top: 200px;
-  margin-left: 100px;
+  margin-top: 15%;
+  margin-left: 8%;
   text-align: center;
 }
 #title-name>h1 {
   font-family: 'Audiowide', cursive;
+  font-size: 6.65vw;
 
 }
 .first-last-name {
   display: inline-flex;
+  font-size: 1.093vw;
 }
 
 .first-last-name>h2 {
@@ -1273,4 +1286,16 @@ ul.slides li {
   margin: auto;
   height: 0;
   border-bottom: grey 1px solid;
+}
+
+.review-quotes {
+  width: 35vw;
+}
+
+
+/* container for about-me section */
+@media (min-width: 1200px) {
+  .container-custom {
+    width: 100vw;
+  }
 }
