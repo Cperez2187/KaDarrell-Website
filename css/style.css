@@ -1292,6 +1292,13 @@ ul.slides li {
   width: 35vw;
 }
 
+#quote-auth {
+  text-align: right;
+  color: #000;
+  font-weight: 400;
+  line-height: 1.2px;
+}
+
 
 /* container for about-me section */
 @media (min-width: 1200px) {
