@@ -41,7 +41,7 @@
   -ms-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  height: 65vmax !important;
+  height: 63vmax !important;
 }
 
 .slick-track {
