@@ -565,7 +565,7 @@ h1.arrow span {
 }
 /* ==========================================================================About========================================================================== */
 .about-image {
-	height:400px;
+	height:428px;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
 	-o-background-size:cover;
@@ -600,6 +600,17 @@ h1.arrow span {
 	text-transform:uppercase;
 	font-size:24px;
 	color: #8C8C8C;
+}
+
+.publish-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.publish-btn a {
+  font-size: 13px;
+  text-align: center;
+  padding: 12px 30px;
 }
 .color-bg h1.arrow span {
     color: #FFE800;
@@ -684,6 +695,14 @@ i.respons {
 	position: relative;
 }
 /* ==========================================================================Portfolio========================================================================== */
+#portfolio {
+  background-color: #DE4547;
+}
+
+#portfolio span {
+  color: white;
+}
+
 .swag {
 	padding:75px 0;
 }

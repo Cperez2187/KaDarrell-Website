@@ -54,10 +54,10 @@
                     textShadowBlur: 0,
                     opacity: 1
                   },
-                  500
+                  500,
+                  changeQuote(array[index + 1])
                 );
-                console.log(array[index + 1]);
-                changeQuote(array[index + 1]);
+                // changeQuote(array[index + 1]);
               }
             );
             break;
@@ -215,7 +215,6 @@
 
 // Chooses quote depending on word
 function changeQuote(word) {
-  console.log('word: ', word);
   const quote = $('#quote-text');
   const author = $('#quote-auth');
 
