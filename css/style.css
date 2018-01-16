@@ -193,7 +193,7 @@ sub {
 p {
 	font-size: 14px;
 	font-weight:100;
-	line-height: 28px!important;
+	line-height: 28px;
 }
 /* ==========================================================================Lists========================================================================== */
 dl,menu,ol,ul {
@@ -1296,7 +1296,7 @@ ul.slides li {
   text-align: right;
   color: #000;
   font-weight: 400;
-  line-height: 1.2px;
+  line-height: 20px;
 }
 
 
