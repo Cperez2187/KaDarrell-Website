@@ -57,7 +57,7 @@
                   500,
                   changeQuote(array[index + 1])
                 );
-                // changeQuote(array[index + 1]);
+                // changeQuote(arra3y[index + 1]);
               }
             );
             break;
@@ -88,6 +88,7 @@
                 '-o-transform': ' rotateY(-180deg)',
                 transform: ' rotateY(-180deg)'
               });
+              changeQuote(array[index+1]);
 
             break;
 
@@ -117,6 +118,7 @@
                 '-o-transform': ' rotateX(-180deg)',
                 transform: ' rotateX(-180deg)'
               });
+              changeQuote(array[index+1]);
 
             break;
 
@@ -146,6 +148,7 @@
                 '-o-transform': ' rotateY(180deg)',
                 transform: ' rotateY(180deg)'
               });
+              changeQuote(array[index+1]);
 
             break;
 
@@ -175,6 +178,7 @@
                 '-o-transform': ' rotateX(180deg)',
                 transform: ' rotateX(180deg)'
               });
+              changeQuote(array[index+1]);
 
             break;
 
@@ -197,6 +201,7 @@
                 '-o-transform': 'rotate(0) scale(1)',
                 transform: 'rotate(0) scale(1)'
               });
+              changeQuote(array[index+1]);
             break;
 
           case 'fade':
@@ -205,6 +210,7 @@
               if (index + 1 == array.length) index = -1;
               el.text(array[index + 1]).fadeIn(settings.speed);
             });
+            changeQuote(array[index+1]);         
             break;
         }
       };
@@ -223,7 +229,7 @@ function changeQuote(word) {
       textShadow: 20,
       opacity: 0
     },
-    500,
+    200,
     function() {
       // Animate author too
       author.animate(
@@ -231,7 +237,7 @@ function changeQuote(word) {
           textShadow: 20,
           opacity: 0
         },
-        200,
+        500,
         function() {
           switch (word) {
             case 'Journalist':
@@ -251,7 +257,7 @@ function changeQuote(word) {
                 );
               author
                 .html(
-                  '- Charmella Greer,Former Editor, <br>NWI Post-Tribune Newspaper INDIANA'
+                  '- Charmella Greer,Former Editor, <br>NWI Post-Tribune Newspaper <br><span id="journ-loc" class="auth-loc">INDIANA</span>'
                 )
                 .animate(
                   {
@@ -265,10 +271,8 @@ function changeQuote(word) {
             case 'Photographer':
               quote
                 .text(
-                  `“Working with Anthony KaDarrell Thigpen has been joy. He’s photographed my wedding anniversary, family
-              portraits, and other important events. Professionalism and dedication is what clients can expect. Anthony has
-              captured some of the best memories that my family will share for a lifetime. I could not have chosen a better
-              person for the job – Anthony embodies Greatness.”`
+                  `“I know I am only 11-years- old, but I am smart enough to know that my daddy is the best photographer,
+                  writer and father in the world. I see why everybody loves working with my daddy, because I love him, too.”`
                 )
                 .animate(
                   {
@@ -278,7 +282,7 @@ function changeQuote(word) {
                   500
                 );
               author
-                .html('- ShaRee Lee, <br>Owner of In Any Events GEORGIA')
+                .html('- Amber Thigpen,, <br>Daughter of Anthony Thigpen <br><span id="photo-loc" class="auth-loc">ARIZONA</span>')
                 .animate(
                   {
                     textShadowBlur: 0,
@@ -303,7 +307,7 @@ function changeQuote(word) {
                   },
                   500
                 );
-              author.html('- Thomas Ray, III, <br>Author TEXAS').animate(
+              author.html('- Thomas Ray, III, <br>Author <br><span id="pub-loc" class="auth-loc">TEXAS</span>').animate(
                 {
                   textShadowBlur: 0,
                   opacity: 1
@@ -315,10 +319,9 @@ function changeQuote(word) {
             default:
               quote
                 .text(
-                  `“He has written news articles, mission and vision statements, and much more on my behalf. His portfolio is 
-                  exceptionally eye-catching with some of the highest resolution images eyes will ever see. He also uses his 
-                  journalism skills to help so many people in need, even raising more than $10,000 for victims of Hurricane Katrina. 
-                  Whether out of this country or in his own community, KaDarrell changes lives."`
+                  `“Mr. KaDarrell is a true missionary. In 2012, he visited Uganda and stayed in a remote village called Mateete.
+                  He was keen in supporting vulnerable school children, needy families, and orphans. After evaluating our
+                  education system, he realized so much lack in the schools, one of which was communication systems...”`
                 )
                 .animate(
                   {
@@ -329,7 +332,7 @@ function changeQuote(word) {
                 );
               author
                 .html(
-                  '- Bishop Sieon C. Roberts, Sr., <br>Pastor of New Hope Church INDIANA'
+                  '- John Robert Emetu, <br>Ugandan Citizen <br><span id="phil-loc" class="auth-loc">AFRICA</span>'
                 )
                 .animate(
                   {

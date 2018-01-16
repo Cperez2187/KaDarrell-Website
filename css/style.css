@@ -60,7 +60,7 @@ h2::after {
 h6 {
 	font-size:15px;
 	color:#8c8c8c;
-	text-transform:uppercase;
+	/* text-transform:uppercase; */
 	font-weight:bold;
 }
 h6::after {
@@ -135,8 +135,8 @@ h5 {
 	margin:1.67em 0;
 }
 h6 {
-	font-size: 12px;
-	margin:2.33em 0;
+	font-size: 20px;
+	/* margin:2.33em 0; */
 }
 abbr[title] {
 	border-bottom:1px dotted;
@@ -640,9 +640,39 @@ h1.arrow span {
 	border: 1px solid #E04343;
 	color: #E04343;
 }
-.services .item:hover .icon {
+
+#journ-icon {
+  border: 1px solid #7F107F;
+  color: #7F107F;
+}
+#photo-icon {
+  border: 1px solid #E04343;
+  color: #E04343;
+}
+#pub-icon {
+  border: 1px solid #CABE36;
+  color: #CABE36;
+}
+#phil-icon {
+  border: 1px solid #629E9F;
+  color: #629E9F;
+}
+
+.services .item:hover #journ-icon {
+	background: #7F107F;
+	border: 1px solid #7F107F;
+}
+.services .item:hover #photo-icon {
 	background: #E04343;
 	border: 1px solid #E04343;
+}
+.services .item:hover #pub-icon {
+	background: #CABE36;
+	border: 1px solid #CABE36;
+}
+.services .item:hover #phil-icon {
+	background: #629E9F;
+	border: 1px solid #629E9F;
 }
 .services .item [class*=fa] {
 	-webkit-transition:all .3s ease-out;
@@ -1283,6 +1313,18 @@ ul.slides li {
   font-size: 6.65vw;
 
 }
+
+.about-kadarrell-1 {
+  font-family: 'Audiowide', cursive;
+  text-transform: none;
+  letter-spacing: 3px;
+}
+.about-kadarrell-2 {
+  font-family: 'Audiowide', cursive;
+  text-transform: none;
+  letter-spacing: 3px;
+  color: black;
+}
 .first-last-name {
   display: inline-flex;
   font-size: 1.093vw;
@@ -1318,10 +1360,56 @@ ul.slides li {
   line-height: 20px;
 }
 
+.auth-loc {
+  font-size: 20px;
+  letter-spacing: 4px;
+}
+
+#journ-loc {
+  color: #7F107F
+}
+#photo-loc {
+  color: #DE4648
+}
+#pub-loc {
+  color: #CABE36
+}
+#phil-loc {
+  color: #629E9F
+}
+
 
 /* container for about-me section */
 @media (min-width: 1200px) {
   .container-custom {
     width: 100vw;
   }
+}
+
+.service-text {
+  height: 336px;
+}
+
+.service-line {
+  width: 25%;
+  margin: auto;
+  height: 0;
+  border-bottom-width: thick;
+  border-bottom-style: solid;
+}
+
+#journ-line {
+  border-bottom-color: #7F107F;
+}
+
+#photo-line {
+  border-bottom-color: #DE4648;
+}
+
+#pub-line {
+  border-bottom-color: #CABE36;
+}
+
+#phil-line {
+  border-bottom-color: #629E9F;
 }
