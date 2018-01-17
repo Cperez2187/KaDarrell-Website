@@ -575,9 +575,9 @@ h1.arrow span {
 	background: #E04343;
 }
 
-.color-bg a {
+/* .color-bg a {
     color: #FFE800;
-}
+} */
 .color-bg h6, .color-bg p {
     color: white;
 }
@@ -608,9 +608,8 @@ h1.arrow span {
 }
 
 .publish-btn a {
-  font-size: 13px;
+  font-size: 14px;
   text-align: center;
-  padding: 12px 30px;
 }
 .color-bg h1.arrow span {
     color: #FFE800;
@@ -930,7 +929,7 @@ img.grayscale:hover {
 	background: #FFE801;
 }
 .weight-outline-btn {
-	display:inline-block;
+	display:inline-flex;
 	padding:20px 30px;
 	color:#8C8C8C;
 	border:solid 1px #8C8C8C;
@@ -1412,4 +1411,8 @@ ul.slides li {
 
 #phil-line {
   border-bottom-color: #629E9F;
+}
+
+#publishing-logo {
+  height: 20vh;
 }
