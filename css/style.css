@@ -571,6 +571,10 @@ h1.arrow span {
 	-o-background-size:cover;
 	background-size:cover;
 }
+
+#publishing-img {
+  height: 444px;
+}
 .color-bg {
 	background: #E04343;
 }
@@ -602,15 +606,54 @@ h1.arrow span {
 	color: #8C8C8C;
 }
 
-.publish-btn {
+#journ-btn {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-around; */
+  background-color: #fff;
+}
+#journ-btn h3 {
+  font-size: 22px;
+  margin: auto;
+  font-weight: bold;
+}
+#journ-btn a {
+  
+}
+#publish-btn {
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
 }
 
-.publish-btn a {
+#publish-btn a {
   font-size: 14px;
   text-align: center;
+  flex-direction: column;
+  padding: 10px 0;
+  border: none;
+  color: #000;
 }
+
+.full-width {
+  width: 50vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -25vw;
+  margin-right: -25vw;
+}
+
+.amazon-btn {
+  height: 60px;
+  border-radius: 10px;
+  border: #000 1px solid;
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.3);
+}
+
+#publishing-logo {
+  height: 13.7vh;
+}
+
 .color-bg h1.arrow span {
     color: #FFE800;
 }
@@ -1411,8 +1454,4 @@ ul.slides li {
 
 #phil-line {
   border-bottom-color: #629E9F;
-}
-
-#publishing-logo {
-  height: 11.7vh;
 }
