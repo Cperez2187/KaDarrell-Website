@@ -574,6 +574,7 @@ h1.arrow span {
 
 #publishing-img {
   height: 444px;
+  background-size: 100% 100%;
 }
 .color-bg {
 	background: #E04343;
@@ -617,8 +618,17 @@ h1.arrow span {
   font-weight: bold;
 }
 #journ-btn a {
-  
+
 }
+
+.white-btn a {
+  flex-direction: column;
+  text-align: center;
+  color: #000;
+  border: none;
+  padding: 0;
+}
+
 #publish-btn {
   display: flex;
   justify-content: space-around;
@@ -643,10 +653,10 @@ h1.arrow span {
   margin-right: -25vw;
 }
 
-.amazon-btn {
+.about-btns {
   height: 60px;
   border-radius: 10px;
-  border: #000 1px solid;
+  /* border: #000 1px solid; */
   box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.3);
 }
 
@@ -981,8 +991,8 @@ img.grayscale:hover {
 	letter-spacing:1px;
 }
 .weight-outline-btn:hover,.outline-btn:focus {
-	color:#424242;
-	border: solid 1px #424242;
+	/* color:#424242; */
+	/* border: solid 1px #424242; */
 }
 /* ==========================================================================Team========================================================================== */
 .team img {
