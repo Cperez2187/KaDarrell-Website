@@ -1466,3 +1466,14 @@ ul.slides li {
 #phil-line {
   border-bottom-color: #629E9F;
 }
+
+.blog-headline a {
+  color: #000;
+  border-bottom: none;
+}
+
+.blog-headline a:hover {
+  color: #E04343;
+  text-decoration: none;
+  outline: none !important;
+}
