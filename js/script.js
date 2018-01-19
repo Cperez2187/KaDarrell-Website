@@ -115,7 +115,7 @@ $(window).load(function() {
 		}
 	});
 	
-		$('#clientSlider').flexslider({
+		$('.flexslider').flexslider({
 		animation: "slide",
 		directionNav: false,
 		controlNav: true,

@@ -634,6 +634,7 @@ h1.arrow span {
   display: flex;
   justify-content: space-around;
   background-color: #fff;
+  margin-top: 10px;
 }
 
 #publish-btn a {
@@ -1476,4 +1477,27 @@ ul.slides li {
   color: #E04343;
   text-decoration: none;
   outline: none !important;
+}
+
+/* Carousel custom CSS */
+.carousel .slick-track {
+  height: 63vmax !important;
+}
+.carousel .slick-dots {
+  position: absolute;
+  bottom: 25px;
+}
+
+/* Review slides custom CSS */
+.slick-active:focus {
+  outline: none;
+}
+
+.slick-slide p {
+  padding: 0 10px;
+}
+
+/* Review section background photo */
+#review-img {
+  height: 600px;
 }
