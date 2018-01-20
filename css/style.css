@@ -576,6 +576,7 @@ h1.arrow span {
 #publishing-img {
   height: 500px;
   background-size: 100% 100%;
+  filter: sepia(.22) brightness(1.1) contrast(.85) saturate(.65);
 }
 .color-bg {
 	background: #E04343;
@@ -1497,11 +1498,35 @@ ul.slides li {
   padding: 0 10px;
 }
 
+#autism-img {
+  margin: 0 54px;
+}
+
 /* Review section background photo */
 #review-img {
   height: 600px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: #FFF;
 }
 
-#autism-img {
-  margin: 0 54px;
+#review-img img {
+  width: 100%;
+}
+
+#review-img p {
+  color: #000;
+  padding: 0 50px;
+}
+
+/* Contact section */
+#contact-loc {
+  box-shadow: 0px 3px 0px 0px #7F107F;
+}
+#contact-phone {
+  box-shadow: 0px 3px 0px 0px #E04343;
+}
+#contact-email {
+  box-shadow: 0px 3px 0px 0px #629E9F;
 }
