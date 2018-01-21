@@ -1,0 +1,25 @@
+(function() {
+  //Put music files in array
+  var music = [
+    './music/bensound-acousticbreeze.mp3',
+    './music/bensound-funkyelement.mp3',
+    './music/bensound-love.mp3',
+    './music/bensound-straight.mp3',
+    './music/bensound-tenderness.mp3',
+  ];
+
+  // Create Howl instance
+  var sound = new Howl({
+    src: music,
+    // autoplay: true,
+    loop: true,
+    volume: 0.5,
+    preload: true,
+  });
+
+  sound.on('load', function() {
+    sound.play();
+  });
+
+
+})()
