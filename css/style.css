@@ -343,7 +343,7 @@ table {
 	padding-bottom: 12em;
 }
 /* Common styles for menu button and menu-wrap */
-.menu-button,.menu-wrap {
+.menu-button,.menu-wrap, .music-button {
 	position:fixed;
 	width:2.5em;
 	height:2.25em;
@@ -1522,7 +1522,7 @@ ul.slides li {
 }
 
 #voted-img {
-  height: 12vh;
+  height: 15%;
   margin: 0 44%;
 }
 
@@ -1535,4 +1535,26 @@ ul.slides li {
 }
 #contact-email {
   box-shadow: 0px 3px 0px 0px #629E9F;
+}
+
+/* Music button */
+.music-button {
+  top: 2em;
+  z-index: 1000;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+.music-button::before {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  bottom: 0.5em;
+  left: -0.5em;
+}
+
+.music-button:hover {
+  opacity: 0.6;
 }
