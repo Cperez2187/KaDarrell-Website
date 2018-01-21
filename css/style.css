@@ -611,12 +611,12 @@ h1.arrow span {
 
 #journ-btn {
   display: flex;
-  /* justify-content: space-around; */
+  justify-content: space-evenly;
   background-color: #fff;
 }
 #journ-btn h3 {
   font-size: 22px;
-  margin: auto;
+  margin: auto 0;
   font-weight: bold;
 }
 #journ-btn a {
@@ -646,14 +646,14 @@ h1.arrow span {
   color: #000;
 }
 
-.full-width {
+/* .full-width {
   width: 50vw;
   position: relative;
   left: 50%;
   right: 50%;
   margin-left: -25vw;
   margin-right: -25vw;
-}
+} */
 
 .about-btns {
   height: 60px;
@@ -1212,10 +1212,14 @@ ul.slides li {
 }
 /* ==========================================================================Responsive========================================================================== */
 /* 320px (iPhone) */
-@media screen and (max-width:414px) {
+/* @media screen and (max-width:414px) {
 	.scrollto {
 		padding: 95px 0px 0px 0px;
-	}
+  }
+  
+  .carousel .slick-track {
+    height: 47vmax !important;
+  }
 
 	.hero h1 {
 		font-size: 100px;
@@ -1230,59 +1234,61 @@ ul.slides li {
   #title-name {
     margin-top: 22%;
   }
-}
+} */
+
 /* 480px (WVGA - Low End Windows Phone) */
 @media screen and (max-width:480px) {
-	.wrapper {
-		background:#f3f5f8;
+  .wrapper {
+    background:#f3f5f8;
 		height:640px;
 	}
 	.iphone {
-		display:none;
+    display:none;
 	}
 	.fluid-white {
-		display:none;
+    display:none;
 	}
 	.wp2,.wp4,.wp5,.light-box {
-		margin-bottom: 30px;
+    margin-bottom: 40px;
+    padding-top: 1px;
 	}
 }
 /* xGA iPad */
 @media screen and (max-width:1024px) {
-	.wp3 {
-		background-position:50px 0;
+  .wp3 {
+    background-position:50px 0;
 	}
 	.swag {
-		background-attachment:scroll;
+    background-attachment:scroll;
 	}
 	.subscribe {
-		background-attachment: scroll;
+    background-attachment: scroll;
 	}
 }
 /* 1200px (Small Desktop,Netbook) */
 @media screen and (max-width:1280px) {
-	.wp3 {
-		background-position: 50px 0;
+  .wp3 {
+    background-position: 50px 0;
 	}
 }
 /* Bootstrap 990px Breakpoint to 480px */
 @media screen and (min-width:480px) and (max-width:991px) {
-	.iphone {
-		display:none;
+  .iphone {
+    display:none;
 	}
 	.fluid-white {
-		display:none;
+    display:none;
 	}
 	.wrapper {
-		background:#f3f5f8;
+    background:#f3f5f8;
 		height:540px;
 	}
 	.wp2,.wp4,.wp5,.light-box {
-		margin-bottom:30px;
+    margin-bottom:30px;
 	}
 }
 @media screen and (max-width:50em) {
-	.icon-list a {
+  .icon-list a {
 		padding:0.5em 0em;
 		margin:0 5px;
 		font-size:1em;
@@ -1297,140 +1303,177 @@ ul.slides li {
 
 /** Responsive fixes **/
 @media screen and (max-width:767px) {
-	.inner {
+  .inner {
     padding-top: 10px;
     text-align: center;
 	}
-
+  
 	.hero {
-	    padding-bottom: 0;
+    padding-bottom: 0;
   }
   
   .hero h1 {
     margin-bottom: 1%;
   }
-
+  
   .hero h3 {
     line-height: 10vh;
   }
-
+  
 	.subscribe input[type=text] {
-	    width: 50%;
-	    margin-bottom: 30px;
+    width: 50%;
+    margin-bottom: 30px;
 	}
-
+  
 	.btn-send {
-	    float: none;
-	
-	    margin-bottom: 80px;
+    float: none;
+    margin-bottom: 40px;
 	}
 	.effects .img {
-    	margin-bottom: 15px;
+    margin-bottom: 15px;
 	}
 	.show-menu .icon-list a {
-		display: block;
+    display: block;
 		width: 100%;
 		float: left;
 		margin-bottom: 10px;
 	}
-
+  
 	.show-menu .menu-wrap {
-		height: 100%;
+    height: 100%;
 	}
 }
 
 
 @media screen and (max-width:991px) {
-	.hero {
-    	padding: 0px;
+  .hero {
+    padding: 0px;
 	}
-
+  
 	.subscribe {
 	    padding-bottom: 40px;
-	}
+    }
+  }
+
+  #sticky-title {
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: left; */
+  }
+  
+  #title-name {
+    position: absolute;
+    z-index: 998;
+    margin-top: 15%;
+    margin-left: 8vw;
+    text-align: center;
+  }
+  #title-name>h1 {
+    font-family: 'Audiowide', cursive;
+    font-size: 6.65vw;
+    
+  }
+  
+  .about-kadarrell-1 {
+    font-family: 'Audiowide', cursive;
+    text-transform: none;
+    letter-spacing: 3px;
+  }
+  .about-kadarrell-2 {
+    font-family: 'Audiowide', cursive;
+    text-transform: none;
+    letter-spacing: 3px;
+    color: black;
+  }
+  .first-last-name {
+    display: inline-flex;
+    font-size: 1.093vw;
+  }
+  
+  .first-last-name>h2 {
+    font-size: 1.5em;
+    letter-spacing: 6px;
+    margin: 0;
+    font-family: 'Dosis', sans-serif;
+    
+  }
+  
+  .first-last-name>h2::after {
+    content: none;
+  }
+  
+  #line {
+    width: 25%;
+    margin: auto;
+    height: 0;
+    border-bottom: grey 1px solid;
+  }
+  
+  .review-quotes {
+    width: 35vw;
+  }
+  
+  #quote-h4 {
+    margin: 0;
+  }
+  #quote-text {
+    font-size: 1.1vw;
+    letter-spacing: .075vw;
+    line-height: 3.9vh;
+    margin: 0;
+  }
+  #quote-auth {
+    text-align: right;
+    color: #000;
+    font-weight: 400;
+    line-height: 3.3vh;
+    font-size: 1.1vw;
+  }
+  
+  .auth-loc {
+    font-size: 1.56vw;
+    letter-spacing: .3vw;
+  }
+  
+  #journ-loc {
+    color: #7F107F
+  }
+  #photo-loc {
+    color: #DE4648
+  }
+  #pub-loc {
+    color: #CABE36
+  }
+  #phil-loc {
+    color: #629E9F
+  }
+  
+  @media screen and (max-width:1020px) {
+    #quote-text {
+      line-height: 2.9vh;
+    }
+    #quote-auth {
+      line-height: 2.3vh;
+    }
+    .hero h3 {
+      line-height: 9vh;
+    }
+  }
+  
+  @media screen and (max-width:840px) {
+    #title-name {
+      margin-top: 18.5vh;
+  }
+  
+  .hero h3 {
+    line-height: 7vh;
+  }
 }
 
-#sticky-title {
-  display: flex;
-  /* flex-direction: column; */
-  /* justify-content: left; */
-}
-
-#title-name {
-  position: absolute;
-  z-index: 998;
-  margin-top: 15%;
-  margin-left: 8%;
-  text-align: center;
-}
-#title-name>h1 {
-  font-family: 'Audiowide', cursive;
-  font-size: 6.65vw;
-
-}
-
-.about-kadarrell-1 {
-  font-family: 'Audiowide', cursive;
-  text-transform: none;
-  letter-spacing: 3px;
-}
-.about-kadarrell-2 {
-  font-family: 'Audiowide', cursive;
-  text-transform: none;
-  letter-spacing: 3px;
-  color: black;
-}
-.first-last-name {
-  display: inline-flex;
-  font-size: 1.093vw;
-}
-
-.first-last-name>h2 {
-  font-size: 1.5em;
-  letter-spacing: 6px;
-  margin: 0;
-  font-family: 'Dosis', sans-serif;
-
-}
-
-.first-last-name>h2::after {
-  content: none;
-}
-
-#line {
-  width: 25%;
-  margin: auto;
-  height: 0;
-  border-bottom: grey 1px solid;
-}
-
-.review-quotes {
-  width: 35vw;
-}
-
-#quote-auth {
-  text-align: right;
-  color: #000;
-  font-weight: 400;
-  line-height: 20px;
-}
-
-.auth-loc {
-  font-size: 20px;
-  letter-spacing: 4px;
-}
-
-#journ-loc {
-  color: #7F107F
-}
-#photo-loc {
-  color: #DE4648
-}
-#pub-loc {
-  color: #CABE36
-}
-#phil-loc {
-  color: #629E9F
+@media screen and (max-width:740px) {
+  .review-quotes {
+    visibility: hidden;
+  }
 }
 
 
@@ -1442,7 +1485,7 @@ ul.slides li {
 }
 
 .service-text {
-  height: 336px;
+  height: 46.3vh;
 }
 
 .service-line {
@@ -1488,6 +1531,8 @@ ul.slides li {
   position: absolute;
   bottom: 25px;
 }
+
+
 
 /* Review slides custom CSS */
 .slick-active:focus {
@@ -1557,4 +1602,66 @@ ul.slides li {
 
 .music-button:hover {
   opacity: 0.6;
+}
+
+#journ-about-text, #publish-about-text {
+  padding: 20px 0 0 0;
+}
+#journ-about-text h6, #publish-about-text h6 {
+  padding: 0 50px;
+}
+#journ-about-text p, #publish-about-text p {
+  padding: 5px 50px 0px 50px;
+}
+
+/* Portrait and Landscape */
+@media screen and (max-width: 414px) 
+   { 
+  .scrollto {
+    padding: 95px 0px 0px 0px;
+  }
+
+  .icon-list {
+    float: none;
+    padding: 2.5em 2em 0 0;
+  }
+  
+  .carousel .slick-track {
+    height: 47vmax !important;
+  }
+
+  .hero h1 {
+    font-size: 100px;
+    line-height: 4vh;
+    margin-bottom: 3%;
+  }
+
+  .hero h3 {
+    line-height: 3vh;
+  }
+
+  .container-fluid .row-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #journ-btn h3 {
+    padding-left: 20px;
+    text-align: center;
+  }
+
+  #publish-btn a {
+    padding: 20px 0;
+  }
+  #publishing-logo {
+    margin: 17px 0;
+    height: 11.5vh;
+  }
+
+  .service-text {
+    height: unset;
+    margin-bottom: 13vh;
+  }
+  .section-padding {
+    padding: 90px 0 70px;
+  }
 }

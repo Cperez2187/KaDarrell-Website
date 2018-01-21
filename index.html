@@ -293,7 +293,7 @@
         <div class="about-image inkwell" style="background-image:url(img/article_2.jpg);"></div>
         <!-- about image 1 -->
       </div>
-      <div class="col-md-6 about-text">
+      <div id="journ-about-text" class="col-md-6 about-text">
         <h6>HIGH QUALITY JOURNALISM by
           <span class="about-kadarrell-1">KaDarrell</span>
         </h6>
@@ -304,7 +304,7 @@
           as a print journalist has provided me the opportunity to impact lives internationally.</p>
         <br>
         <!-- About Text 1 -->
-        <div id="journ-btn" class="full-width">
+        <div id="journ-btn">
           <h3>See more articles at:</h3>
           <a href="https://www.highbeam.com/Search?searchTerm=By+Anthony+KaDarrell+Thigpen" class="weight-outline-btn" target="_blank">
             <img class="about-btns" src="./img/highbeam_logo.png">
@@ -314,7 +314,7 @@
       </div>
     </div>
     <!-- About 2 -->
-    <div class="row">
+    <div class="row row-reverse">
       <div class="col-md-6 about-text">
         <h6>PROFESSIONAL PHOTOGRAPHY by
           <span class="about-kadarrell-2">
@@ -350,7 +350,7 @@
         <div id="publishing-img" class="about-image" style="background-image:url(img/books_collage.jpg)"></div>
         <!-- about image 3 -->
       </div>
-      <div class="col-md-6 about-text">
+      <div id="publish-about-text" class="col-md-6 about-text">
         <h6>BOOK PUBLISHING by
           <span class="about-kadarrell-1">KaDarrell</span>
         </h6>
@@ -363,7 +363,7 @@
         </p>
         <br>
         <!-- About Text 3 -->
-        <div id="publish-btn" class="full-width">
+        <div id="publish-btn">
           <a href="https://www.amazon.com/s/ref=dp_byline_sr_book_1?ie=UTF8&text=Anthony+KaDarrell+Thigpen&search-alias=books&field-author=Anthony+KaDarrell+Thigpen&sort=relevancerank"
             target="_blank" class="weight-outline-btn">Authored
             <br>
@@ -382,7 +382,7 @@
       </div>
     </div>
     <!-- About 4 -->
-    <div class="row">
+    <div class="row row-reverse">
       <div class="col-md-6 about-text">
         <h6>INTERNATIONAL PHILANTHROPY by
           <span class="about-kadarrell-2">
@@ -915,25 +915,24 @@
         </div>
         <!-- Contact Form -->
         <div class="col-md-6 contact">
-          <form role="form">
-            <!-- Name -->
+          <form id="contact-form" role="form">
             <div class="row">
               <div class="col-md-6">
-                <!-- E-Mail -->
+                <!-- Name -->
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Your name">
+                  <input id="name" type="text" class="form-control" placeholder="Your name" name="name">
                 </div>
               </div>
               <div class="col-md-6">
-                <!-- Phone Number -->
+                <!-- E-Mail -->
                 <div class="form-group">
-                  <input type="email" class="form-control" placeholder="Email address">
+                  <input id="email" type="email" class="form-control" placeholder="Email address" name="email">
                 </div>
               </div>
             </div>
             <!-- Message Area -->
             <div class="form-group">
-              <textarea class="form-control" placeholder="Write you message here..." style="height:232px;"></textarea>
+              <textarea id="message" class="form-control" placeholder="Write you message here..." style="height:232px;" name="message"></textarea>
             </div>
             <!-- Subtmit Button -->
             <button type="submit" class="btn btn-send">
