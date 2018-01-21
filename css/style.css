@@ -1614,6 +1614,10 @@ ul.slides li {
   padding: 5px 50px 0px 50px;
 }
 
+.alert {
+  width: 50%;
+}
+
 /* Portrait and Landscape */
 @media screen and (max-width: 414px) 
    { 
@@ -1663,5 +1667,9 @@ ul.slides li {
   }
   .section-padding {
     padding: 90px 0 70px;
+  }
+
+  .alert {
+    width: 100%;
   }
 }

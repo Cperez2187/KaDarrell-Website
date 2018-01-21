@@ -23,7 +23,7 @@
   sound.on('load', function() {
     $('.music-button').on('click', function() {
       play = !play;
-      console.log(play);
+
       if (play) {
         // sound.play() && sound.mute(false);
         sound.playing() ? sound.mute(false) : sound.play();
@@ -57,6 +57,6 @@ function shuffle(array) {
     array[currentIndex] = array[randomIndex];
     array[randomIndex] = temporaryValue;
   }
-  console.log(array);
+  
   return array;
 }
