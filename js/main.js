@@ -74,7 +74,7 @@ $('#contact-form').submit(function (e) {
 	//if any field is empty
 	if (!email['0'].value || !name['0'].value || !message['0'].value) {
 		// Display error message
-		$('#contact-form-div').append('<div class="alert alert-danger alert-dismissible" role="alert">' +
+		$('#div-contact-form').append('<div class="alert alert-danger alert-dismissible" role="alert">' +
 		'<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + 
 		'One or more fields are empty, try again.</div>');
 		// Prevent browser from redirecting
@@ -91,7 +91,7 @@ $('#contact-form').submit(function (e) {
 			console.log(textStatus);
 			console.log('Success!');
 			// Display success message
-			$('#contact-form-div').append('<div class="alert alert-success alert-dismissible" role="alert">' +
+			$('#div-contact-form').append('<div class="alert alert-success alert-dismissible" role="alert">' +
 				'<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + 
 				'<strong>Message sent</strong></div>');
 		}, function (jqXHR, textStatus) {
