@@ -15,6 +15,7 @@
     loop: true,
     volume: 0.5,
     preload: true,
+    html5: true
   });
 
   sound.on('load', function() {
