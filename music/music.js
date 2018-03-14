@@ -6,6 +6,10 @@
     './music/bensound-straight.mp3',
     './music/bensound-acousticbreeze.mp3',
     './music/bensound-funkyelement.mp3',
+    './music/Black_History.mp3',
+    './music/Chocolate_Child.mp3',
+    './music/pebbles.mp3',
+    './music/Uncontainable.mp3'
   ];
 
 
