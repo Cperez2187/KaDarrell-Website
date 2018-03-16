@@ -1,11 +1,11 @@
 (function() {
   //Put music files in array
   var music = [
-    './music/bensound-love.mp3',
-    './music/bensound-tenderness.mp3',
-    './music/bensound-straight.mp3',
-    './music/bensound-acousticbreeze.mp3',
-    './music/bensound-funkyelement.mp3',
+    // './music/bensound-love.mp3',
+    // './music/bensound-tenderness.mp3',
+    // './music/bensound-straight.mp3',
+    // './music/bensound-acousticbreeze.mp3',
+    // './music/bensound-funkyelement.mp3',
     './music/Black_History.mp3',
     './music/Chocolate_Child.mp3',
     './music/pebbles.mp3',
@@ -19,12 +19,13 @@
     loop: true,
     volume: 0.5,
     preload: true,
-    html5: true
+    // rate: 3.0
+    // html5: true
   });
 
   var play = false;
 
-  sound.on('load', function() {
+  // sound.on('load', function() {
     $('.music-button').on('click', function() {
       play = !play;
 
@@ -41,8 +42,7 @@
       }
     });
 
-  });
-
+  // });
 
 })()
 
@@ -61,6 +61,6 @@ function shuffle(array) {
     array[currentIndex] = array[randomIndex];
     array[randomIndex] = temporaryValue;
   }
-  
+  console.log(array);
   return array;
 }
