@@ -61,6 +61,6 @@ function shuffle(array) {
     array[currentIndex] = array[randomIndex];
     array[randomIndex] = temporaryValue;
   }
-  console.log(array);
+  // console.log(array);
   return array;
 }
