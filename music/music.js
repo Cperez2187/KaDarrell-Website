@@ -16,6 +16,7 @@
   // Create Howl instance
 
   var play = false;
+  var muted = false;
   var track = 0;
   // Create new shuffled array
   var shuffledArray = shuffle(musicArray.slice());
@@ -30,9 +31,11 @@
       $(this).attr('aria-label', 'Mute Music');
       // Show forward button
       $('#forward').toggle();
+      muted = false;
       
     } else {
       current.mute(true);
+      muted = true;
       $(this).toggleClass('glyphicon-play glyphicon-volume-off');
       $(this).attr('aria-label', 'Play Music');
       // Hide forward button
@@ -44,11 +47,17 @@
   $('#forward').on('click', function() {
     // Stop current track and play next one
     current.stop();
-    track++;
-    if (track > shuffledArray.length - 1) track = 0;
-    current = audioInstance(shuffledArray, track);
-    current.play();
+    nextTrack();
   })
+  
+  function nextTrack() {
+    (track >= shuffledArray.length - 1) ? track = 0 : track++;
+   
+    current = audioInstance(shuffledArray, track);
+    if (muted === false) {
+      current.play();
+    }
+  }
 
   function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -74,7 +83,8 @@
       src: array[track],
       volume: 0.5,
       preload: true,
-      html5: true
+      html5: true,
+      onend: nextTrack,
     });
   }
 
