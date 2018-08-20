@@ -1,15 +1,10 @@
 import React from 'react';
-import Button from '@material-ui/core/button';
-import AppBar from '@material-ui/core/AppBar';
-
+import Main from './components/Main';
 
 const App = () => {
   return (
     <div>
-      <AppBar position="static" color="default" />
-      <Button variant="raised" color="primary">
-        Hello World
-      </Button>
+      <Main />
     </div>
   );
 }
