@@ -32,10 +32,6 @@ const styles = theme => ({
   'appBar-right': {
     marginRight: drawerWidth
   },
-  drawerPaper: {
-    position: 'relative',
-    width: drawerWidth
-  },
   toolbar: theme.mixins.toolbar,
   toolbarFlex: {
     display: 'flex',
@@ -72,6 +68,7 @@ class Main extends Component {
               </Typography>
               <Button
                 variant="fab"
+                mini
                 color="secondary"
                 aria-label="Add"
                 className={classes.button}>
@@ -79,7 +76,7 @@ class Main extends Component {
               </Button>
             </Toolbar>
           </AppBar>
-          <PermanentDrawer variant="permanent" classes={classes} anchor={anchor}/> {/* Main content */}
+          <PermanentDrawer variant="permanent" anchor={anchor}/> {/* Main content */}
           <main className={classes.content}>
             <div className={classes.toolbar}/>
             <CreateBlog/>
