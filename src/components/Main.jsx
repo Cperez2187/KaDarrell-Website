@@ -60,7 +60,7 @@ class Main extends Component {
           >
             <Toolbar>
               <Typography variant="title" color="inherit" noWrap>
-                Permanent drawer
+                Anthony's Blog Posts
               </Typography>
             </Toolbar>
           </AppBar>
