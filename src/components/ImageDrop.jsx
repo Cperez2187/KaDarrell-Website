@@ -8,8 +8,9 @@ const ImageDrop = props => {
     <Dropzone
       multiple={false}
       accept="image/*"
-      onDrop={props.onImageDrop}>
-      <p>Drop an image or click to select a file to upload.</p>
+      onDrop={props.onImageDrop}
+    >
+      <p style={{ textAlign: 'center' }}>Drop an image or click to select a file to upload.</p>
     </Dropzone>
   );
 }

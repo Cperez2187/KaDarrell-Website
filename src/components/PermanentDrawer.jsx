@@ -12,7 +12,8 @@ const drawerWidth = 240;
 
 const styles = theme => ({
   button: {
-    margin: theme.spacing.unit
+    margin: theme.spacing.unit,
+    justifyContent: 'left'
   },
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
@@ -42,11 +43,6 @@ const PermanentDrawer = ({ variant, classes, anchor }) => (
     <Button color="secondary" className={classes.button}>
       Logout
     </Button>
-    {/* <List component="nav">
-      <ListItem button>
-        <ListItemText primary="Logout" />
-      </ListItem>
-    </List> */}
   </Drawer>
 );
 
