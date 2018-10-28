@@ -19,35 +19,42 @@ const styles = theme => ({
   drawerPaper: {
     position: 'relative',
     width: drawerWidth
-  },
+  }
 })
 
-const PermanentDrawer = ({ variant, classes, anchor }) => (
-  <Drawer
-    variant={variant}
-    classes={{
-    paper: classes.drawerPaper
-  }}
-    anchor={anchor}>
-    <div className={classes.toolbar}/>
-    <Divider/> {/* Replace with list items */}
-    <List component="nav">
-      <ListItem button>
-        <ListItemText primary="Blog Post" secondary="June 7, 2018"/>
+const PermanentDrawer = ({variant, classes, anchor, blogPosts}) => {
+
+  const blogPostListItems = blogPosts => (
+    blogPosts.map(blog => (
+      <ListItem button key={blog.title}>
+        <ListItemText primary={blog.title} secondary={blog.date}/>
       </ListItem>
-      <ListItem button>
-        <ListItemText primary="Blog Post" secondary="June 14, 2018"/>
-      </ListItem>
-    </List>
-    <Divider/>
-    <Button color="secondary" className={classes.button}>
-      Logout
-    </Button>
-  </Drawer>
-);
+    ))
+  );
+
+  return (
+    <Drawer
+      variant={variant}
+      classes={{
+      paper: classes.drawerPaper
+    }}
+      anchor={anchor}>
+      <div className={classes.toolbar}/>
+      <Divider/> {/* Replace with list items */}
+      <List component="nav">
+        {blogPostListItems(blogPosts)}
+      </List>
+      <Divider/>
+      <Button color="secondary" className={classes.button}>
+        Logout
+      </Button>
+    </Drawer>
+  )
+}
 
 PermanentDrawer.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
+  blogPosts: PropTypes.array.isRequired
 };
 
 export default withStyles(styles)(PermanentDrawer);

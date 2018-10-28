@@ -1,4 +1,6 @@
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+// Required for side-effects
+import 'firebase/firestore';
 
 //TODO: Change this config to Anthony's firebase
 const config = {
@@ -11,4 +13,12 @@ const config = {
 };
 
 const fire = firebase.initializeApp(config);
+
+const db = fire.firestore();
+db.settings({
+  timestampsInSnapshots: true
+});
+
+export { db };
 export default fire;
+

@@ -45,17 +45,22 @@ const styles = theme => ({
   }
 });
 
-// Make stateful to handle children state
+// TODO: Need to add uploading state and use modal to display uploading state
 class CreateBlog extends Component {
   state = {
+    category: '',
     title: '',
-    text: '',
+    subtitle: '',
+    authoredBy: '',
+    body: '',
+    date: '',
+    imageUrl: '',
     uploadedImage: '',
-    uploadedFileCloudinaryUrl: ''
+    isUploading: false,
   }
 
   onImageDrop = files => {
-    this.setState({uploadedImage: files[0]});
+    this.setState({uploadedImage: files[0].name});
 
     this.handleImageUpload(files[0]);
   }
@@ -67,58 +72,113 @@ class CreateBlog extends Component {
       .field('upload_preset', CLOUDINARY_UPLOAD_PRESET)
       .field('file', file);
 
-    upload.end((err, response) => {
-      if (err) {
-        console.log(err);
+    upload.then(res => {
+      if (res.body.secure_url) {
+        this.setState({ imageUrl: res.body.secure_url });
       }
 
-      if (response.body.secure_url) {
-        this.setState({uploadedFileCloudinaryUrl: response.body.secure_url});
-      }
-    })
+    }).catch(err => {
+      console.log('err', err);
+    });
+  }
+
+  onBlogSubmit = event => {
+    event.preventDefault();
+
+    const { title, body, date, imageUrl } = this.state;
+    const { uploadBlog } = this.props;
+    uploadBlog({ title, body, date, imageUrl });
+  }
+
+  onFieldChange = event => {
+    const { name, value } = event.target;
+    
+    this.setState({ [name]: value });
   }
 
   render() {
-    const {classes} = this.props;
+    const { classes } = this.props;
 
     return (
       <div>
         <Paper className={classes.root} elevation={4}>
-          <Typography variant="headline" component="h3" className={classes.typography}>
+          <Typography variant="h5" component="h3" className={classes.typography}>
             Blog Post
           </Typography>
           <ImageDrop onImageDrop={this.onImageDrop}/>
-          <br/> {this.state.uploadedFileCloudinaryUrl === ''
+          <br/>
+          {this.state.imageUrl === ''
             ? null
             : <Card className={classes.card}>
-              <CardMedia
-                className={classes.media}
-                image={this.state.uploadedFileCloudinaryUrl}
-                alt="Anthony Thigpen, Anthony Kadarrell Thigpen"
-                title={this.state.uploadedImage.name}/>
-            </Card>
-}
-          <TextField
-            id="with-placeholder"
-            label="Title"
-            className={classes.textField}
-            margin="normal"
-            style={{
-            width: '50%'
-          }}/>
-          <TextField
-            id="textarea"
-            label="Write blog post here"
-            multiline
-            className={classes.textField}
-            margin="normal"
-            style={{
-            width: '98%'
-          }}/>
-          <Button variant="contained" color="default" className={classes.button}>
-            Upload
-            <CloudUploadIcon className={classes.rightIcon}/>
-          </Button>
+                <CardMedia
+                  className={classes.media}
+                  image={this.state.imageUrl}
+                  alt="Anthony Thigpen, Anthony Kadarrell Thigpen"
+                  title={this.state.uploadedImage.name}/>
+              </Card>
+          }
+          <form>
+            <TextField
+              label="Category"
+              name="category"
+              margin="normal"
+              id="with-placeholder"
+              variant="outlined"
+              className={classes.textField}
+              onChange={this.onFieldChange}
+            />
+            <TextField
+              type="date"
+              name="date"
+              margin="normal"
+              id="outlined"
+              variant="outlined"
+              className={classes.textField}
+              onChange={this.onFieldChange}
+            />
+            <TextField
+              label="Title"
+              name="title"
+              margin="normal"
+              style={{ width: '50%' }}
+              id="with-placeholder"
+              variant="outlined"
+              className={classes.textField}
+              onChange={this.onFieldChange}
+            />
+            <TextField
+              label="Subtitle"
+              name="subtitle"
+              margin="normal"
+              style={{ width: '50%' }}
+              id="with-placeholder"
+              variant="outlined"
+              className={classes.textField}
+              onChange={this.onFieldChange}
+            />
+            <TextField
+              label="Write blog post here"
+              name="body"
+              multiline
+              rows="20"
+              rowsMax="100"
+              margin="normal"
+              style={{ width: '98%' }}
+              id="outlined-textarea"
+              variant="outlined"
+              className={classes.textField}
+              onChange={this.onFieldChange}
+            />
+            <Button
+              variant="contained"
+              color="default"
+              className={classes.button}
+              onClick={this.onBlogSubmit}
+            >
+              Upload
+              <CloudUploadIcon className={classes.rightIcon}/>
+            </Button>
+          </form>
         </Paper>
       </div>
     );
@@ -126,7 +186,8 @@ class CreateBlog extends Component {
 }
 
 CreateBlog.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
+  uploadBlog: PropTypes.func.isRequired
 };
 
 export default withStyles(styles)(CreateBlog);
