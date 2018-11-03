@@ -1,0 +1,2 @@
+# Optional: Redirect default Netlify subdomain to primary domain
+https://gracious-ardinghelli-ffe514.netlify.com/* https://anthonythigpen.com/:splat 301!
